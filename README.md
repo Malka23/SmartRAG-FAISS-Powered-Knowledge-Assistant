@@ -24,7 +24,7 @@ The architecture is **LLM-agnostic** — the retrieved context can be piped into
 - ✂️ **Smart Chunking** — Text split into 500-word chunks for optimal retrieval
 - 🔢 **Dense Embeddings** — `all-MiniLM-L6-v2` encodes chunks semantically
 - ⚡ **FAISS Similarity Search** — Top-5 most relevant chunks retrieved instantly
-- 🔌 **LLM-Agnostic** — Plug in OpenAI, Flan-T5, or any model for answer generation
+- 🤖 **LLM Answer Generation** — Flan-T5 generates a direct answer from retrieved context
 - 🖥️ **Clean Streamlit UI** — Upload, query, and read results in one page
 
 ---
@@ -72,7 +72,9 @@ Query embedded → FAISS Top-5 search
       ↓
 Retrieved chunks shown as context
       ↓
-[Plug in LLM here for final answer]
+Retrieved chunks passed to Flan-T5
+      ↓
+Answer generated and displayed
 ```
 
 1. **PDF Parsing** — PyMuPDF reads every page and extracts raw text
@@ -94,8 +96,8 @@ Retrieved chunks shown as context
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/SmartRAG_Faiss.git
-cd SmartRAG_Faiss
+git clone https://github.com/Malka23/SmartRAG-FAISS-Powered-Knowledge-Assistant.git
+cd SmartRAG-FAISS-Powered-Knowledge-Assistant
 
 # 2. Install dependencies
 pip install streamlit pymupdf faiss-cpu sentence-transformers numpy
@@ -166,11 +168,11 @@ numpy
 
 ---
 
-## 🙋‍♂️ Author
+## 🙋‍♀️ Author
 
-**Your Name**
+**Malka Naaz**
 - GitHub: [@Malka23](https://github.com/Malka23)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/malka-naaz-870338145)
+- LinkedIn: [Malka Naaz](https://linkedin.com/in/ar-malka-naaz-870338145)
 
 ---
 
